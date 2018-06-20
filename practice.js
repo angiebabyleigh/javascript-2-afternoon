@@ -15,6 +15,12 @@
 */
 
 //Code here
+var me = {
+  name: "Angela",
+  age: 41
+}
+
+alert(me.name);
 
 
 
@@ -26,7 +32,14 @@
 */
 
 //Code here
-
+let favoriteThings = {
+  band: 'Boyz II Men',
+  food: 'ice cream',
+  person:'Shirley',
+  book: 'Where the Red Fern Grows',
+  movie: 'The Long Kiss Goodnight',
+  holiday: 'Christmas'
+}
 
 
 /*
@@ -34,7 +47,8 @@
 */
 
 //Code here
-
+favoriteThings.car = 'SUV';
+favoriteThings.brand = 'Sony'
 
 
 /*
@@ -43,7 +57,8 @@
 
 //Code here
 
-
+favoriteThings.food = 'Chicken Nuggets';
+favoriteThings.book = 'Harry Potter';
 
 ////////// PROBLEM 3 //////////
 
@@ -56,7 +71,11 @@
 */
 
 //Code here
+let backPack = {};
+let item = 'firstPocket';
 
+backPack[item] = 'chapstick';
+backPack.color = 'blue';
 
 
 /*
@@ -64,7 +83,7 @@
 */
 
 //Code here
-
+alert(backPack);
 
 
 /*
@@ -74,7 +93,7 @@ Instead, console.log your whole backPack object and then check out the console.
 */
 
 //Code here
-
+console.log(backPack);
 
 
 ////////// PROBLEM 4 //////////
@@ -97,6 +116,8 @@ var user2 = {
 */
 
 //Code Here
+user2.name = 'Tyler S. McGinnis';
+user2.email = 'tyler.mcginnis@devmounta.in';
 
 
 
@@ -120,16 +141,23 @@ var user2 = {
 */
 
 //Code Here
-
+let methodCollection = {};
 
 
 /*
-  Now add two methods (functions that are properties on objects) to your methodCollection object. 
-  One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console. 
+  Now add two methods (functions that are properties on objects) to your 
+  methodCollection object. 
+  One called 'alertHello' which alerts 'hello' and another method called 
+  'logHello' which logs 'hello' to the console. 
 */
 
 //Code Here
-
+methodCollection.alertHello = function() {
+  alert('hello');
+}
+methodCollection.logHello = function() {
+  console.log('hello');
+}
 
 
 /*
@@ -137,27 +165,45 @@ var user2 = {
 */
 
 //Code Here
-
+methodCollection.alertHello;
+methodCollection.logHello;
 
 
 ////////// PROBLEM 6 //////////
 
 /* 
-  Create a function called makePerson which takes in name, birthday, ssn as its parameters. 
+  Create a function called makePerson which takes in name, birthday, ssn as its 
+  parameters. 
   Return a new object with all of the information that you passed in.
 */
 
 //Code Here
-
+function makePerson(nameParm, bday, social) {
+  let person = {
+    name: nameParm,
+    birthday: bday,
+    ssn: social
+  }
+  return person;
+}
 
 
 ////////// PROBLEM 7 //////////
 
 /*
-  Create a function called makeCard which takes in cardNumber, expirationDate, and securityCode to make a Credit Card object.
-  Return that object so that whenever you invoke makeCard, you get a brand new credit card.
+  Create a function called makeCard which takes in cardNumber, expirationDate, and 
+  securityCode to make a Credit Card object.
+  Return that object so that whenever you invoke makeCard, you get a brand new 
+  credit card.
 */
 
 //Code Here
-
+function makeCard(cardNum, expDate, secCode) {
+  let card = {
+    cardNumber: cardNum,
+    expirationDate: expDate,
+    securityCode: secCode
+  }
+  return card;
+}
 
